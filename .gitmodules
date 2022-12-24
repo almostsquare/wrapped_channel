@@ -1,0 +1,3 @@
+[submodule "channel"]
+	path = channel
+	url = https://github.com/almostsquare/gps_asic.git
