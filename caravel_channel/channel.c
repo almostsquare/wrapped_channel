@@ -93,6 +93,8 @@ void main()
     reg_la1_data = 1;
     reg_la1_data = 0;
 
+	reg_la1_oenb = 0x7F; // enable outputs for NCO and CA_GEN enables and register address
+
 	// Set reset to high and enable both NCOs
 	reg_la1_data |= (1 << RESET_ADDR);
 	reg_la1_data |= (1 << CA_NCO_ENABLE);

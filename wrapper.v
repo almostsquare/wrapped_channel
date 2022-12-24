@@ -179,7 +179,7 @@ module wrapped_channel(
     .prompt_q                   (buf_la1_data_out[7]),
 
     .ca_nco_phase_upper         (buf_la1_data_out[15:12]),   // only grabbing top 4 bits
-    .lo_nco_phase_upper         (buf_la1_data_out[11:8]),    // only grabbing top 4 bits
+    .lo_nco_phase_upper         (buf_la1_data_out[11:8])    // only grabbing top 4 bits
 );
 
 // Compressed pin mapping for class project (la[3:1] to la[1] only)

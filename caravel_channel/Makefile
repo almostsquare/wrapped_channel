@@ -7,7 +7,9 @@ CONFIG = caravel_user_project
 
 export COCOTB_REDUCED_LOG_FMT=1
 # Change this line if you want to use existing cocotb test modules:
-export PYTHONPATH := $(DESIGNS)/verilog/rtl/channel/test
+export PYTHONPATH := $(DESIGNS)/verilog/rtl/wrapped_channel/channel/test
+#export PYTHONPATH := $(DESIGNS)/verilog/rtl/channel/test
+# changed when doing the design verification
 export LIBPYTHON_LOC=$(shell cocotb-config --libpython)
 
 

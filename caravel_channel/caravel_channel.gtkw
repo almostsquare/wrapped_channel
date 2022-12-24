@@ -1,0 +1,39 @@
+[*]
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Sat Dec 24 22:33:55 2022
+[*]
+[dumpfile] "/media/aww/onetb/projects/caravel_user_project/verilog/dv/caravel_channel/channel.vcd"
+[dumpfile_mtime] "Sat Dec 24 22:32:35 2022"
+[dumpfile_size] 302391
+[savefile] "/media/aww/onetb/projects/caravel_user_project/verilog/dv/caravel_channel/caravel_channel.gtkw"
+[timestart] 0
+[size] 3768 2086
+[pos] -1 -1
+*-25.500000 325000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] channel_tb.
+[treeopen] channel_tb.uut.
+[treeopen] channel_tb.uut.mprj.
+[treeopen] channel_tb.uut.mprj.wrapped_channel.
+[treeopen] channel_tb.uut.mprj.wrapped_channel.gps_channel0.
+[sst_width] 297
+[signals_width] 510
+[sst_expanded] 1
+[sst_vpaned_height] 657
+@28
+channel_tb.clock
+channel_tb.flash_clk
+channel_tb.prompt_i
+channel_tb.sample
+channel_tb.uut.mprj.wrapped_channel.active
+channel_tb.uut.mprj.wrapped_channel.gps_channel0.clk
+channel_tb.uut.mprj.wrapped_channel.gps_channel0.reset
+channel_tb.uut.mprj.wrapped_channel.gps_channel0.ca_nco_enable
+channel_tb.uut.mprj.wrapped_channel.gps_channel0.lo_nco_enable
+channel_tb.uut.mprj.wrapped_channel.gps_channel0.ca_gen_enable
+@22
+channel_tb.uut.mprj.wrapped_channel.gps_channel0.lo_nco_phase_accumulator[31:0]
+channel_tb.uut.mprj.wrapped_channel.gps_channel0.lo_nco_step[31:0]
+@28
+channel_tb.uut.mprj.wrapped_channel.gps_channel0.lo_nco_phase_sync
+[pattern_trace] 1
+[pattern_trace] 0
