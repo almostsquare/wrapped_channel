@@ -1,0 +1,22 @@
+{
+    "DESIGN_NAME": "wrapped_channel",
+    "VERILOG_FILES": ["dir::wrapper.v",
+                    "dir::channel/src/nco.v",
+                    "dir::channel/src/ca_code.v"
+                    ],
+    "PL_TARGET_DENSITY": "0.4",
+    "PL_RESIZER_BUFFER_OUTPUT_PORTS": "0",
+    "DIE_AREA": "0 0 250 250",
+    "FP_SIZING": "absolute",
+    "SYNTH_DEFINES": "MPRJ_IO_PADS=38",
+    "CLOCK_PERIOD": "10",
+    "CLOCK_PORT": "wb_clk_i",
+    "DESIGN_IS_CORE": "0",
+    "RT_MAX_LAYER": "met4",
+    "VDD_NETS": "[list {vccd1}]",
+    "GND_NETS": "[list {vssd1}]",
+    "RUN_CVC": "0",
+    "FP_IO_VTHICKNESS_MULT": "4",
+    "FP_IO_HTHICKNESS_MULT": "4",
+    "ROUTING_CORES": "4"
+}
