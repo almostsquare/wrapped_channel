@@ -93,13 +93,6 @@ void main()
     reg_la1_data = 1;
     reg_la1_data = 0;
 
-	// Configure LA Probes
-	reg_la0_oenb = reg_la0_iena = 0x00000000;    // [31:0]   reserved for class
-	reg_la1_oenb = reg_la1_iena = 0xFFFFFFFF;    // [63:32]  data_value
-	reg_la2_oenb = reg_la2_iena = 0x0000013F;    // [72][69:64]  reset, enable, and addr
-	reg_la3_oenb = reg_la3_iena = 0x00000000;    // [127:96] nco phase
-
-
 	// Set reset to high and enable both NCOs
 	reg_la1_data |= (1 << RESET_ADDR);
 	reg_la1_data |= (1 << CA_NCO_ENABLE);
