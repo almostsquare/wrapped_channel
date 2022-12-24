@@ -11,7 +11,7 @@
 //`define USE_IRQ 1
 
 // update this to the name of your module
-module wrapped_project(
+module wrapped_channel(
 `ifdef USE_POWER_PINS
     inout vccd1,	// User area 1 1.8V supply
     inout vssd1,	// User area 1 digital ground
@@ -152,5 +152,46 @@ module wrapped_project(
     // connecting what you need of the above signals. 
     // Use the buffered outputs for your module's outputs.
 
+    channel gps_channel0 (
+`ifdef USE_POWER_PINS
+	.vccd1(vccd1),	// User area 1 1.8V power
+	.vssd1(vssd1),	// User area 1 digital ground
+`endif
+
+    .clk                        (wb_clk_i),             // wishbone clock
+    .reset                      (la1_data_in[0]),       // logic analyser driven reset
+
+    // IO Pads
+    .sample                     (io_in[23]),
+    .prompt_i                   (buf_io_out[21]),
+    .lo_i                       (buf_io_out[19]),
+
+    // Logic Analyzer (Inputs)
+    .data_value                 ({16'b0, la1_data_in[31:16]}), // truncated to lower two bytes
+    .address                    (la1_data_in[6:4]),
+
+    .lo_nco_enable              (la1_data_in[1]),
+    .ca_nco_enable              (la1_data_in[2]),
+    .ca_gen_enable              (la1_data_in[3]),
+
+    // Logic Analyzer (Outputs)
+    //.lo_q                       (buf_la1_data_out[]),       // not enough LA I/O
+    .prompt_q                   (buf_la1_data_out[7]),
+
+    .ca_nco_phase_upper         (buf_la1_data_out[15:12]),   // only grabbing top 4 bits
+    .lo_nco_phase_upper         (buf_la1_data_out[11:8]),    // only grabbing top 4 bits
+);
+
+// Compressed pin mapping for class project (la[3:1] to la[1] only)
+// la1 [32:0] assignments
+// [31:16]      data_value[15:0]
+// [15:12]      lo_nco_phase_upper[3:0]
+// [11:8]       ca_nco_phase_upper[3:0]
+// [7]          prompt_q
+// [6:4]        address
+// [3]          ca_gen_enable
+// [2]          ca_nco_enable
+// [1]          lo_nco_enable
+// [0]          reset
 endmodule 
 `default_nettype wire
