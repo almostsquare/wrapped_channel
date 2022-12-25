@@ -30,10 +30,10 @@ module channel_tb;
 	wire prompt_i, lo_i;
 	wire sample;
 
-    assign prompt_i = mprj_io[21];
-    assign lo_i = mprj_io[19];
+	assign prompt_i = mprj_io[21];
+	assign lo_i = mprj_io[19];
 
-    assign mprj_io[23] = sample;
+	assign mprj_io[23] = sample;
 	assign sample = 1'b1;
 
 	// External clock is used by default.  Make this artificially fast for the

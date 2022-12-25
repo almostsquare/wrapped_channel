@@ -15,4 +15,4 @@ an incoming signal (sample on pin 31) with the local oscillator and C/A code and
 This project was made as part of the [Zero to ASIC Course](https://zerotoasiccourse.com)!
 
 # License
-This project is [licensed under Apache 2](LICENSE)
+This project is [licensed under Apache 2](LICENSE).
