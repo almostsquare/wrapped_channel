@@ -152,7 +152,7 @@ module wrapped_channel(
     // connecting what you need of the above signals. 
     // Use the buffered outputs for your module's outputs.
 
-    channel gps_channel0 (
+    channel gps_channel0(
 `ifdef USE_POWER_PINS
 	.vccd1(vccd1),	// User area 1 1.8V power
 	.vssd1(vssd1),	// User area 1 digital ground
