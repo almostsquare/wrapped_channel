@@ -1,22 +1,18 @@
 ![](../../workflows/multi_tool/badge.svg)
 
-# Information about your project
+# Single GPS Tracking Channel
 
-This is a template project you can clone and use to take part in the multi project submission to the
-Google/Efabless/Skywater shuttle.
+Starter project for Zero to ASIC. Only had one week to implement, so this is only a partial tracking channel.
 
-The tools that will test and create the aggregated design are here: https://github.com/mattvenn/multi_project_tools
+There are two adjustable numercially controlled oscillators (NCOs) whose frequency can be adjusted in software.
+There is also a Gold Code generator for all 63 PRN codes. There is a primitive 1-bit mixer that will correlate
+an incoming signal (sample on pin 31) with the local oscillator and C/A code and generate an output on pin 21.
 
-# Project info.yaml
-
-You need to fill in the fields of [info.yaml](info.yaml)
-
-See [here for more information](https://github.com/mattvenn/multi_project_tools/blob/main/docs/project_spec.md)
+![gds](docs/wrapped_channel_gds.png)
 
 # Zero to ASIC Course
 
 This project was made as part of the [Zero to ASIC Course](https://zerotoasiccourse.com)!
 
 # License
-
 This project is [licensed under Apache 2](LICENSE)
