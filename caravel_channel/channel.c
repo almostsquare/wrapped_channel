@@ -20,7 +20,7 @@
 #include <stub.c>
 
 // change to your project's ID - ask Matt
-#define PROJECT_ID 0
+#define PROJECT_ID 1
 
 // Write a small register map based on wrapper.v pin mapping
 #define DATA_VALUE 0x10
